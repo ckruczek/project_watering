@@ -9992,14 +9992,14 @@ by R. Vogg  15.March.2002</description>
 <part name="R3" library="resistor" deviceset="R-EU_" device="0204/5" value="1.8k"/>
 <part name="R4" library="resistor" deviceset="R-EU_" device="0204/5" value="680"/>
 <part name="R5" library="resistor" deviceset="R-EU_" device="0204/5" value="4.3k"/>
-<part name="JP1_SOIL" library="pinhead" deviceset="PINHD-1X3" device=""/>
+<part name="SOIL_MOIST" library="pinhead" deviceset="PINHD-1X3" device=""/>
 <part name="T2" library="transistor" deviceset="2N2222" device=""/>
 <part name="T3" library="transistor" deviceset="2N2222" device=""/>
 <part name="LED1" library="led" deviceset="LED" device="3MM"/>
-<part name="LED2" library="led" deviceset="LED" device="3MM"/>
-<part name="LED3" library="led" deviceset="LED" device="3MM"/>
+<part name="NASS" library="led" deviceset="LED" device="3MM"/>
+<part name="FEUCHT" library="led" deviceset="LED" device="3MM"/>
 <part name="LED4" library="led" deviceset="LED" device="3MM"/>
-<part name="LED5" library="led" deviceset="LED" device="3MM"/>
+<part name="TROCKEN" library="led" deviceset="LED" device="3MM"/>
 <part name="LED6" library="led" deviceset="LED" device="3MM"/>
 <part name="R9" library="resistor" deviceset="R-EU_" device="0204/5" value="150"/>
 <part name="R10" library="resistor" deviceset="R-EU_" device="0204/5" value="150"/>
@@ -10021,7 +10021,7 @@ by R. Vogg  15.March.2002</description>
 <part name="R7" library="resistor" deviceset="R-EU_" device="0204/5" value="10k"/>
 <part name="Q1" library="transistor-fet" deviceset="IRF510" device=""/>
 <part name="R8" library="resistor" deviceset="R-EU_" device="0204/5" value="220"/>
-<part name="LED7" library="led" deviceset="LED" device="3MM"/>
+<part name="BATTERY" library="led" deviceset="LED" device="3MM"/>
 <part name="C3" library="rcl" deviceset="C-EU" device="025-025X050" value="0.1uF"/>
 <part name="JP1" library="pinhead" deviceset="PINHD-1X1" device="" value="JP2_DSIG"/>
 <part name="R15" library="resistor" deviceset="R-EU_" device="0204/5" value="4.7k"/>
@@ -10047,7 +10047,7 @@ gewechselt werden muss.</text>
 <instance part="R3" gate="G$1" x="-96.52" y="30.48" rot="R90"/>
 <instance part="R4" gate="G$1" x="-96.52" y="7.62" rot="R90"/>
 <instance part="R5" gate="G$1" x="-96.52" y="-17.78" rot="R90"/>
-<instance part="JP1_SOIL" gate="A" x="-25.4" y="88.9"/>
+<instance part="SOIL_MOIST" gate="A" x="-25.4" y="88.9"/>
 <instance part="T2" gate="G$1" x="-60.96" y="15.24" smashed="yes">
 <attribute name="NAME" x="-63.5" y="17.78" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-66.04" y="20.32" size="1.778" layer="96"/>
@@ -10057,10 +10057,10 @@ gewechselt werden muss.</text>
 <attribute name="VALUE" x="-66.04" y="-5.08" size="1.778" layer="96"/>
 </instance>
 <instance part="LED1" gate="G$1" x="-38.1" y="48.26" rot="R90"/>
-<instance part="LED2" gate="G$1" x="-38.1" y="35.56" rot="R90"/>
-<instance part="LED3" gate="G$1" x="-38.1" y="22.86" rot="R90"/>
+<instance part="NASS" gate="G$1" x="-38.1" y="35.56" rot="R90"/>
+<instance part="FEUCHT" gate="G$1" x="-38.1" y="22.86" rot="R90"/>
 <instance part="LED4" gate="G$1" x="-38.1" y="10.16" rot="R90"/>
-<instance part="LED5" gate="G$1" x="-38.1" y="-2.54" rot="R90"/>
+<instance part="TROCKEN" gate="G$1" x="-38.1" y="-2.54" rot="R90"/>
 <instance part="LED6" gate="G$1" x="-38.1" y="-15.24" rot="R90"/>
 <instance part="R9" gate="G$1" x="-45.72" y="35.56" rot="R180"/>
 <instance part="R10" gate="G$1" x="-45.72" y="48.26" rot="R180"/>
@@ -10089,7 +10089,7 @@ gewechselt werden muss.</text>
 <attribute name="NAME" x="-77.47" y="119.38" size="1.778" layer="95"/>
 </instance>
 <instance part="R8" gate="G$1" x="-68.58" y="101.6" rot="R90"/>
-<instance part="LED7" gate="G$1" x="-63.5" y="96.52" rot="R90"/>
+<instance part="BATTERY" gate="G$1" x="-63.5" y="96.52" rot="R90"/>
 <instance part="C3" gate="G$1" x="5.08" y="116.84"/>
 <instance part="JP1" gate="G$1" x="-48.26" y="-30.48" smashed="yes">
 <attribute name="VALUE" x="-57.15" y="-27.94" size="1.778" layer="96"/>
@@ -10134,7 +10134,7 @@ gewechselt werden muss.</text>
 <label x="-76.2" y="30.48" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP1_SOIL" gate="A" pin="2"/>
+<pinref part="SOIL_MOIST" gate="A" pin="2"/>
 <wire x1="-27.94" y1="88.9" x2="-38.1" y2="88.9" width="0.1524" layer="91"/>
 <label x="-38.1" y="88.9" size="1.778" layer="95"/>
 <pinref part="C2" gate="G$1" pin="2"/>
@@ -10154,12 +10154,12 @@ gewechselt werden muss.</text>
 <label x="-30.48" y="48.26" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="LED2" gate="G$1" pin="C"/>
+<pinref part="NASS" gate="G$1" pin="C"/>
 <wire x1="-33.02" y1="35.56" x2="-27.94" y2="35.56" width="0.1524" layer="91"/>
 <label x="-30.48" y="35.56" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="LED3" gate="G$1" pin="C"/>
+<pinref part="FEUCHT" gate="G$1" pin="C"/>
 <wire x1="-33.02" y1="22.86" x2="-27.94" y2="22.86" width="0.1524" layer="91"/>
 <label x="-30.48" y="22.86" size="1.778" layer="95"/>
 </segment>
@@ -10169,7 +10169,7 @@ gewechselt werden muss.</text>
 <label x="-30.48" y="10.16" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="LED5" gate="G$1" pin="C"/>
+<pinref part="TROCKEN" gate="G$1" pin="C"/>
 <wire x1="-33.02" y1="-2.54" x2="-27.94" y2="-2.54" width="0.1524" layer="91"/>
 <label x="-30.48" y="-2.54" size="1.778" layer="95"/>
 </segment>
@@ -10212,7 +10212,7 @@ gewechselt werden muss.</text>
 <junction x="-109.22" y="93.98"/>
 </segment>
 <segment>
-<pinref part="LED7" gate="G$1" pin="C"/>
+<pinref part="BATTERY" gate="G$1" pin="C"/>
 <wire x1="-53.34" y1="96.52" x2="-58.42" y2="96.52" width="0.1524" layer="91"/>
 <label x="-55.88" y="96.52" size="1.778" layer="95"/>
 </segment>
@@ -10224,7 +10224,7 @@ gewechselt werden muss.</text>
 </net>
 <net name="SOIL_IN" class="0">
 <segment>
-<pinref part="JP1_SOIL" gate="A" pin="3"/>
+<pinref part="SOIL_MOIST" gate="A" pin="3"/>
 <wire x1="-27.94" y1="86.36" x2="-38.1" y2="86.36" width="0.1524" layer="91"/>
 <label x="-43.18" y="86.36" size="1.778" layer="95"/>
 </segment>
@@ -10275,7 +10275,7 @@ gewechselt werden muss.</text>
 <net name="N$13" class="0">
 <segment>
 <pinref part="R9" gate="G$1" pin="1"/>
-<pinref part="LED2" gate="G$1" pin="A"/>
+<pinref part="NASS" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="N$14" class="0">
@@ -10323,7 +10323,7 @@ gewechselt werden muss.</text>
 <net name="N$21" class="0">
 <segment>
 <pinref part="R12" gate="G$1" pin="1"/>
-<pinref part="LED3" gate="G$1" pin="A"/>
+<pinref part="FEUCHT" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="N$22" class="0">
@@ -10335,7 +10335,7 @@ gewechselt werden muss.</text>
 <net name="N$23" class="0">
 <segment>
 <pinref part="R14" gate="G$1" pin="1"/>
-<pinref part="LED5" gate="G$1" pin="A"/>
+<pinref part="TROCKEN" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="N$24" class="0">
@@ -10353,7 +10353,7 @@ gewechselt werden muss.</text>
 <pinref part="C5" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="JP1_SOIL" gate="A" pin="1"/>
+<pinref part="SOIL_MOIST" gate="A" pin="1"/>
 <wire x1="-27.94" y1="91.44" x2="-38.1" y2="91.44" width="0.1524" layer="91"/>
 <label x="-38.1" y="91.44" size="1.778" layer="95"/>
 <wire x1="-27.94" y1="91.44" x2="-17.78" y2="91.44" width="0.1524" layer="91"/>
@@ -10462,7 +10462,7 @@ gewechselt werden muss.</text>
 <net name="N$9" class="0">
 <segment>
 <pinref part="R8" gate="G$1" pin="1"/>
-<pinref part="LED7" gate="G$1" pin="A"/>
+<pinref part="BATTERY" gate="G$1" pin="A"/>
 <wire x1="-68.58" y1="96.52" x2="-66.04" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
