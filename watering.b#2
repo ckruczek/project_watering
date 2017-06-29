@@ -64,8 +64,14 @@
 <wire x1="-2.54" y1="59.68" x2="-2.54" y2="0" width="0" layer="20"/>
 <text x="48.26" y="3.81" size="1.27" layer="21">Waesserungsindikator.
 Spannungsversorgung 9V Block Batterie</text>
-<text x="73.66" y="41.91" size="1.27" layer="21" rot="R90">Trocken Signal</text>
+<text x="73.66" y="41.91" size="1.27" layer="21" rot="R90">TROCKEN SIGNAL</text>
 <dimension x1="-2.54" y1="64.77" x2="82.55" y2="64.77" x3="40.005" y3="62.23" textsize="1.27" layer="1" visible="yes"/>
+<dimension x1="-3.81" y1="0" x2="-3.81" y2="59.69" x3="-7.62" y3="29.845" textsize="1.27" layer="1" visible="yes"/>
+<text x="30.48" y="38.1" size="1.27" layer="21">SOIL_MOIST</text>
+<text x="31.75" y="45.72" size="1.27" layer="21">BATTERY</text>
+<text x="52.07" y="39.37" size="1.27" layer="21" rot="R90">NASS</text>
+<text x="59.69" y="39.37" size="1.27" layer="21" rot="R90">FEUCHT</text>
+<text x="67.31" y="39.37" size="1.27" layer="21" rot="R90">TROCKEN</text>
 </plain>
 <libraries>
 <library name="rcl">
@@ -2760,23 +2766,22 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="8.89" y="11.43" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="8.89" y="11.43" size="1.778" layer="27" display="off"/>
 </element>
-<element name="JP1_SOIL" library="pinhead" package="1X03" value="" x="35.56" y="41.91" rot="R180"/>
+<element name="SOIL_MOIST" library="pinhead" package="1X03" value="" x="35.56" y="41.91" smashed="yes" rot="R180">
+<attribute name="VALUE" x="39.37" y="45.085" size="1.27" layer="27" rot="R180"/>
+</element>
 <element name="LED1" library="led" package="LED3MM" value="" x="52.07" y="30.48" smashed="yes" rot="R90">
 <attribute name="VALUE" x="53.721" y="32.385" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
 <element name="NASS" library="led" package="LED3MM" value="" x="52.07" y="35.56" smashed="yes" rot="R90">
-<attribute name="NAME" x="51.689" y="38.735" size="1.27" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="53.721" y="37.465" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
 <element name="FEUCHT" library="led" package="LED3MM" value="" x="59.69" y="35.56" smashed="yes" rot="R90">
-<attribute name="NAME" x="59.309" y="38.735" size="1.27" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="61.341" y="37.465" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
 <element name="LED4" library="led" package="LED3MM" value="" x="59.69" y="30.48" smashed="yes" rot="R90">
 <attribute name="VALUE" x="61.341" y="32.385" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
 <element name="TROCKEN" library="led" package="LED3MM" value="" x="67.31" y="35.56" smashed="yes" rot="R90">
-<attribute name="NAME" x="66.929" y="38.735" size="1.27" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="68.961" y="37.465" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
 <element name="LED6" library="led" package="LED3MM" value="" x="67.31" y="30.48" smashed="yes" rot="R90">
@@ -2802,7 +2807,6 @@ design rules under a new name.</description>
 <element name="Q1" library="transistor-fet" package="TO220" value="IRF510" x="17.78" y="52.07" rot="R90"/>
 <element name="R8" library="resistor" package="0204/5" value="220" x="34.29" y="54.61" rot="R180"/>
 <element name="BATTERY" library="led" package="LED3MM" value="" x="35.56" y="49.53" smashed="yes" rot="R180">
-<attribute name="NAME" x="40.005" y="46.609" size="1.27" layer="25" ratio="10" rot="R180"/>
 <attribute name="VALUE" x="33.655" y="51.181" size="1.27" layer="27" ratio="10" rot="R180"/>
 </element>
 <element name="C3" library="rcl" package="C025-025X050" value="0.1uF" x="17.78" y="12.7" rot="R270"/>
@@ -2829,7 +2833,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="GND">
 <contactref element="IC1" pad="11"/>
-<contactref element="JP1_SOIL" pad="2"/>
+<contactref element="SOIL_MOIST" pad="2"/>
 <contactref element="C2" pad="2"/>
 <contactref element="R5" pad="1"/>
 <contactref element="LED1" pad="K"/>
@@ -2856,7 +2860,7 @@ design rules under a new name.</description>
 </polygon>
 </signal>
 <signal name="SOIL_IN">
-<contactref element="JP1_SOIL" pad="3"/>
+<contactref element="SOIL_MOIST" pad="3"/>
 <contactref element="IC1" pad="2"/>
 <contactref element="IC1" pad="13"/>
 <contactref element="IC1" pad="9"/>
@@ -2967,7 +2971,7 @@ design rules under a new name.</description>
 <signal name="+5V">
 <contactref element="IC2" pad="3"/>
 <contactref element="C5" pad="1"/>
-<contactref element="JP1_SOIL" pad="1"/>
+<contactref element="SOIL_MOIST" pad="1"/>
 <contactref element="C2" pad="1"/>
 <contactref element="IC1" pad="4"/>
 <contactref element="T1" pad="3"/>
