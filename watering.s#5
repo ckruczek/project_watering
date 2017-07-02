@@ -9975,6 +9975,74 @@ by R. Vogg  15.March.2002</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="transistor-npn">
+<description>&lt;b&gt;NPN Transistors&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="TO18">
+<description>&lt;b&gt;TO 18&lt;/b&gt;</description>
+<wire x1="0.9289" y1="2.227" x2="2.227" y2="0.9289" width="0.0508" layer="51" curve="-44.7172"/>
+<wire x1="0.9289" y1="-2.227" x2="2.227" y2="-0.9289" width="0.0508" layer="51" curve="44.7172"/>
+<wire x1="-3.937" y1="-0.508" x2="-3.937" y2="0.508" width="0.127" layer="21"/>
+<wire x1="-2.227" y1="-0.9289" x2="0.929" y2="2.2271" width="0.0508" layer="21" curve="-135.281"/>
+<wire x1="-2.227" y1="-0.9289" x2="-0.9289" y2="-2.227" width="0.0508" layer="51" curve="44.7172"/>
+<wire x1="-3.937" y1="-0.508" x2="-2.8765" y2="-0.508" width="0.127" layer="21"/>
+<wire x1="-0.9289" y1="-2.227" x2="0.9289" y2="-2.227" width="0.0508" layer="21" curve="45.2828"/>
+<wire x1="-3.937" y1="0.508" x2="-2.8765" y2="0.508" width="0.127" layer="21"/>
+<wire x1="2.227" y1="-0.9289" x2="2.227" y2="0.9289" width="0.0508" layer="21" curve="45.2828"/>
+<circle x="0" y="0" radius="2.921" width="0.127" layer="21"/>
+<pad name="1" x="-1.27" y="-1.27" drill="0.8128" shape="octagon"/>
+<pad name="2" x="1.27" y="-1.27" drill="0.8128" shape="octagon"/>
+<pad name="3" x="1.27" y="1.27" drill="0.8128" shape="octagon"/>
+<text x="3.175" y="0" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="3.175" y="-1.905" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<text x="-1.905" y="-1.27" size="1.27" layer="51" ratio="10">1</text>
+<text x="0.635" y="-1.27" size="1.27" layer="51" ratio="10">2</text>
+<text x="0" y="0.635" size="1.27" layer="51" ratio="10">3</text>
+</package>
+</packages>
+<symbols>
+<symbol name="NPN">
+<wire x1="2.54" y1="2.54" x2="0.508" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="1.778" y1="-1.524" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="1.27" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="1.778" y2="-1.524" width="0.1524" layer="94"/>
+<wire x1="1.54" y1="-2.04" x2="0.308" y2="-1.424" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="-2.413" x2="2.286" y2="-2.413" width="0.254" layer="94"/>
+<wire x1="2.286" y1="-2.413" x2="1.778" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="1.778" y1="-1.778" x2="1.524" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-2.286" x2="1.905" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="1.905" y1="-2.286" x2="1.778" y2="-2.032" width="0.254" layer="94"/>
+<text x="-10.16" y="7.62" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="5.08" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-2.54" x2="0.508" y2="2.54" layer="94"/>
+<pin name="B" x="-2.54" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="E" x="2.54" y="-5.08" visible="off" length="short" direction="pas" swaplevel="3" rot="R90"/>
+<pin name="C" x="2.54" y="5.08" visible="off" length="short" direction="pas" swaplevel="2" rot="R270"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="2N2222*" prefix="Q">
+<description>&lt;b&gt;NPN Transistor&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="NPN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TO18">
+<connects>
+<connect gate="G$1" pin="B" pad="2"/>
+<connect gate="G$1" pin="C" pad="3"/>
+<connect gate="G$1" pin="E" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+<technology name="A"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -9992,9 +10060,9 @@ by R. Vogg  15.March.2002</description>
 <part name="R3" library="resistor" deviceset="R-EU_" device="0204/5" value="1.8k"/>
 <part name="R4" library="resistor" deviceset="R-EU_" device="0204/5" value="680"/>
 <part name="R5" library="resistor" deviceset="R-EU_" device="0204/5" value="4.3k"/>
-<part name="JP1_SOIL" library="pinhead" deviceset="PINHD-1X3" device=""/>
-<part name="T2" library="transistor" deviceset="2N2222" device=""/>
-<part name="T3" library="transistor" deviceset="2N2222" device=""/>
+<part name="SOIL_MOIST" library="pinhead" deviceset="PINHD-1X3" device=""/>
+<part name="T2" library="transistor-npn" deviceset="2N2222*" device="" technology="A" value="2N2222A"/>
+<part name="T3" library="transistor-npn" deviceset="2N2222*" device="" technology="A" value="2N2222A"/>
 <part name="LED1" library="led" deviceset="LED" device="3MM"/>
 <part name="NASS" library="led" deviceset="LED" device="3MM"/>
 <part name="FEUCHT" library="led" deviceset="LED" device="3MM"/>
@@ -10047,7 +10115,7 @@ gewechselt werden muss.</text>
 <instance part="R3" gate="G$1" x="-96.52" y="30.48" rot="R90"/>
 <instance part="R4" gate="G$1" x="-96.52" y="7.62" rot="R90"/>
 <instance part="R5" gate="G$1" x="-96.52" y="-17.78" rot="R90"/>
-<instance part="JP1_SOIL" gate="A" x="-25.4" y="88.9"/>
+<instance part="SOIL_MOIST" gate="A" x="-25.4" y="88.9"/>
 <instance part="T2" gate="G$1" x="-60.96" y="15.24" smashed="yes">
 <attribute name="NAME" x="-63.5" y="17.78" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-66.04" y="20.32" size="1.778" layer="96"/>
@@ -10134,7 +10202,7 @@ gewechselt werden muss.</text>
 <label x="-76.2" y="30.48" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP1_SOIL" gate="A" pin="2"/>
+<pinref part="SOIL_MOIST" gate="A" pin="2"/>
 <wire x1="-27.94" y1="88.9" x2="-38.1" y2="88.9" width="0.1524" layer="91"/>
 <label x="-38.1" y="88.9" size="1.778" layer="95"/>
 <pinref part="C2" gate="G$1" pin="2"/>
@@ -10224,7 +10292,7 @@ gewechselt werden muss.</text>
 </net>
 <net name="SOIL_IN" class="0">
 <segment>
-<pinref part="JP1_SOIL" gate="A" pin="3"/>
+<pinref part="SOIL_MOIST" gate="A" pin="3"/>
 <wire x1="-27.94" y1="86.36" x2="-38.1" y2="86.36" width="0.1524" layer="91"/>
 <label x="-43.18" y="86.36" size="1.778" layer="95"/>
 </segment>
@@ -10353,7 +10421,7 @@ gewechselt werden muss.</text>
 <pinref part="C5" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="JP1_SOIL" gate="A" pin="1"/>
+<pinref part="SOIL_MOIST" gate="A" pin="1"/>
 <wire x1="-27.94" y1="91.44" x2="-38.1" y2="91.44" width="0.1524" layer="91"/>
 <label x="-38.1" y="91.44" size="1.778" layer="95"/>
 <wire x1="-27.94" y1="91.44" x2="-17.78" y2="91.44" width="0.1524" layer="91"/>
