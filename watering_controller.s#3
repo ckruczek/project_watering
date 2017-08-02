@@ -8037,9 +8037,9 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <label x="10.16" y="121.92" size="1.27" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="Q1" gate="G$1" pin="D"/>
-<wire x1="15.24" y1="93.98" x2="22.86" y2="93.98" width="0.1524" layer="91"/>
-<label x="22.86" y="93.98" size="1.27" layer="95"/>
+<pinref part="X1" gate="-1" pin="KL"/>
+<wire x1="48.26" y1="86.36" x2="53.34" y2="86.36" width="0.1524" layer="91"/>
+<label x="53.34" y="86.36" size="1.27" layer="95"/>
 </segment>
 </net>
 <net name="SOIL_MOIST" class="0">
@@ -8085,18 +8085,16 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="7.62" y1="86.36" x2="7.62" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="PUMP_VCC" class="0">
-<segment>
-<pinref part="X1" gate="-1" pin="KL"/>
-<wire x1="48.26" y1="86.36" x2="53.34" y2="86.36" width="0.1524" layer="91"/>
-<label x="53.34" y="86.36" size="1.27" layer="95"/>
-</segment>
-</net>
 <net name="PUMP_GND" class="0">
 <segment>
 <pinref part="X1" gate="-2" pin="KL"/>
 <wire x1="48.26" y1="81.28" x2="53.34" y2="81.28" width="0.1524" layer="91"/>
 <label x="53.34" y="81.28" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="Q1" gate="G$1" pin="D"/>
+<wire x1="15.24" y1="93.98" x2="22.86" y2="93.98" width="0.1524" layer="91"/>
+<label x="22.86" y="93.98" size="1.27" layer="95"/>
 </segment>
 </net>
 </nets>

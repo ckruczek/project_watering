@@ -8,8 +8,8 @@
 </settings>
 <grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="1" name="Top" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
@@ -22,10 +22,10 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
-<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
-<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
@@ -43,8 +43,8 @@
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="no" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="no" active="no"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="no" active="no"/>
@@ -55,6 +55,7 @@
 <layer number="97" name="Info" color="7" fill="1" visible="no" active="no"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="no" active="no"/>
 <layer number="99" name="SpiceOrder" color="5" fill="1" visible="no" active="no"/>
+<layer number="125" name="_tNames" color="14" fill="1" visible="no" active="yes"/>
 </layers>
 <board>
 <plain>
@@ -71,6 +72,34 @@ Spannungsversorgung 9V Block Batterie</text>
 <text x="59.69" y="39.37" size="1.27" layer="21" rot="R90">FEUCHT</text>
 <text x="67.31" y="39.37" size="1.27" layer="21" rot="R90">TROCKEN</text>
 <text x="13.97" y="2.54" size="1.27" layer="21">+9V SUPPLY</text>
+<text x="35.814" y="48.514" size="1.27" layer="125" ratio="10">C2</text>
+<text x="19.304" y="14.986" size="1.27" layer="125" ratio="10" rot="R270">C3</text>
+<text x="5.334" y="22.606" size="1.27" layer="125" ratio="10" rot="R270">C4</text>
+<text x="10.414" y="23.876" size="1.27" layer="125" ratio="10" rot="R270">C5</text>
+<text x="26.6192" y="7.1882" size="1.27" layer="125" ratio="10" rot="R180">D1</text>
+<text x="27.432" y="35.941" size="1.27" layer="125" ratio="10">IC1</text>
+<text x="0.889" y="25.908" size="1.778" layer="125" ratio="10" rot="R90">IC2</text>
+<text x="5.08" y="16.51" size="1.27" layer="125">J1</text>
+<text x="21.463" y="43.18" size="1.778" layer="125" ratio="10" rot="R90">Q1</text>
+<text x="27.4066" y="12.8016" size="0.9906" layer="125" ratio="10" rot="R180">R1</text>
+<text x="16.6116" y="27.2034" size="0.9906" layer="125" ratio="10" rot="R90">R2</text>
+<text x="24.0284" y="31.2166" size="0.9906" layer="125" ratio="10" rot="R270">R3</text>
+<text x="36.9316" y="24.6634" size="0.9906" layer="125" ratio="10" rot="R90">R4</text>
+<text x="41.8084" y="28.6766" size="0.9906" layer="125" ratio="10" rot="R270">R5</text>
+<text x="18.9484" y="23.5966" size="0.9906" layer="125" ratio="10" rot="R270">R6</text>
+<text x="21.6916" y="19.5834" size="0.9906" layer="125" ratio="10" rot="R90">R7</text>
+<text x="45.1866" y="48.3616" size="0.9906" layer="125" ratio="10" rot="R180">R8</text>
+<text x="54.0766" y="19.1516" size="0.9906" layer="125" ratio="10" rot="R180">R9</text>
+<text x="54.0766" y="24.2316" size="0.9906" layer="125" ratio="10" rot="R180">R10</text>
+<text x="61.6966" y="24.2316" size="0.9906" layer="125" ratio="10" rot="R180">R11</text>
+<text x="61.6966" y="19.1516" size="0.9906" layer="125" ratio="10" rot="R180">R12</text>
+<text x="69.3166" y="24.2316" size="0.9906" layer="125" ratio="10" rot="R180">R13</text>
+<text x="69.3166" y="19.1516" size="0.9906" layer="125" ratio="10" rot="R180">R14</text>
+<text x="77.5716" y="14.5034" size="0.9906" layer="125" ratio="10" rot="R90">R15</text>
+<text x="35.0266" y="38.2016" size="0.9906" layer="125" ratio="10" rot="R180">R16</text>
+<text x="55.245" y="15.24" size="1.27" layer="125" ratio="10">T1</text>
+<text x="62.865" y="15.24" size="1.27" layer="125" ratio="10">T2</text>
+<text x="70.485" y="15.24" size="1.27" layer="125" ratio="10">T3</text>
 </plain>
 <libraries>
 <library name="rcl">
