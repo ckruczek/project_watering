@@ -10033,10 +10033,10 @@ gewechselt werden muss.</text>
 <instance part="JP1" gate="B" x="-55.88" y="-27.94" smashed="yes" rot="R90">
 <attribute name="VALUE" x="-58.42" y="-36.83" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R15" gate="G$1" x="-38.1" y="-38.1" rot="R90"/>
+<instance part="R15" gate="G$1" x="-27.94" y="-38.1" rot="R90"/>
 <instance part="R16" gate="G$1" x="-78.74" y="101.6" rot="R90"/>
 <instance part="T3" gate="G$1" x="-60.96" y="-10.16"/>
-<instance part="R17" gate="G$1" x="-40.64" y="-38.1" rot="R90"/>
+<instance part="R17" gate="G$1" x="-35.56" y="-38.1" rot="R90"/>
 <instance part="R18" gate="G$1" x="-43.18" y="-38.1" rot="R90"/>
 <instance part="C1" gate="G$1" x="-81.28" y="-27.94" rot="R90"/>
 </instances>
@@ -10152,15 +10152,15 @@ gewechselt werden muss.</text>
 </segment>
 <segment>
 <pinref part="R15" gate="G$1" pin="1"/>
-<wire x1="-38.1" y1="-43.18" x2="-38.1" y2="-48.26" width="0.1524" layer="91"/>
-<label x="-40.64" y="-50.8" size="1.016" layer="95" rot="R270" xref="yes"/>
+<wire x1="-27.94" y1="-43.18" x2="-33.02" y2="-48.26" width="0.1524" layer="91"/>
+<label x="-35.56" y="-50.8" size="1.016" layer="95" rot="R270" xref="yes"/>
 <pinref part="R17" gate="G$1" pin="1"/>
-<wire x1="-40.64" y1="-43.18" x2="-40.64" y2="-48.26" width="0.1524" layer="91"/>
-<wire x1="-40.64" y1="-48.26" x2="-38.1" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="-43.18" x2="-35.56" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="-48.26" x2="-33.02" y2="-48.26" width="0.1524" layer="91"/>
 <pinref part="R18" gate="G$1" pin="1"/>
-<wire x1="-43.18" y1="-43.18" x2="-43.18" y2="-48.26" width="0.1524" layer="91"/>
-<wire x1="-43.18" y1="-48.26" x2="-40.64" y2="-48.26" width="0.1524" layer="91"/>
-<junction x="-40.64" y="-48.26"/>
+<wire x1="-43.18" y1="-43.18" x2="-38.1" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="-48.26" x2="-35.56" y2="-48.26" width="0.1524" layer="91"/>
+<junction x="-35.56" y="-48.26"/>
 </segment>
 <segment>
 <pinref part="R16" gate="G$1" pin="1"/>
@@ -10246,6 +10246,8 @@ gewechselt werden muss.</text>
 <pinref part="JP1" gate="B" pin="1"/>
 <wire x1="-48.26" y1="-30.48" x2="-43.18" y2="-30.48" width="0.1524" layer="91"/>
 <label x="-43.18" y="-30.48" size="1.016" layer="95" xref="yes"/>
+<pinref part="R18" gate="G$1" pin="2"/>
+<wire x1="-43.18" y1="-33.02" x2="-43.18" y2="-30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FEUCHT" class="0">
@@ -10261,8 +10263,10 @@ gewechselt werden muss.</text>
 </segment>
 <segment>
 <pinref part="JP1" gate="B" pin="3"/>
-<wire x1="-48.26" y1="-27.94" x2="-43.18" y2="-27.94" width="0.1524" layer="91"/>
-<label x="-43.18" y="-27.94" size="1.016" layer="95" xref="yes"/>
+<label x="-35.56" y="-27.94" size="1.016" layer="95" xref="yes"/>
+<wire x1="-48.26" y1="-27.94" x2="-35.56" y2="-27.94" width="0.1524" layer="91"/>
+<pinref part="R17" gate="G$1" pin="2"/>
+<wire x1="-35.56" y1="-27.94" x2="-35.56" y2="-33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TROCKEN" class="0">
@@ -10278,8 +10282,10 @@ gewechselt werden muss.</text>
 </segment>
 <segment>
 <pinref part="JP1" gate="B" pin="5"/>
-<wire x1="-48.26" y1="-25.4" x2="-43.18" y2="-25.4" width="0.1524" layer="91"/>
-<label x="-43.18" y="-25.4" size="1.016" layer="95" xref="yes"/>
+<label x="-27.94" y="-25.4" size="1.016" layer="95" xref="yes"/>
+<wire x1="-48.26" y1="-25.4" x2="-27.94" y2="-25.4" width="0.1524" layer="91"/>
+<pinref part="R15" gate="G$1" pin="2"/>
+<wire x1="-27.94" y1="-25.4" x2="-27.94" y2="-33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$21" class="0">

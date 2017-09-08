@@ -9658,73 +9658,6 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="transistor-npn">
-<description>&lt;b&gt;NPN Transistors&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="SOT23">
-<description>&lt;b&gt;SOT-23&lt;/b&gt;</description>
-<wire x1="1.4224" y1="0.6604" x2="1.4224" y2="-0.6604" width="0.1524" layer="51"/>
-<wire x1="1.4224" y1="-0.6604" x2="-1.4224" y2="-0.6604" width="0.1524" layer="51"/>
-<wire x1="-1.4224" y1="-0.6604" x2="-1.4224" y2="0.6604" width="0.1524" layer="51"/>
-<wire x1="-1.4224" y1="0.6604" x2="1.4224" y2="0.6604" width="0.1524" layer="51"/>
-<smd name="3" x="0" y="1.1" dx="1" dy="1.4" layer="1"/>
-<smd name="2" x="0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
-<smd name="1" x="-0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
-<text x="-1.905" y="1.905" size="1.27" layer="25">&gt;NAME</text>
-<text x="-1.905" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-0.2286" y1="0.7112" x2="0.2286" y2="1.2954" layer="51"/>
-<rectangle x1="0.7112" y1="-1.2954" x2="1.1684" y2="-0.7112" layer="51"/>
-<rectangle x1="-1.1684" y1="-1.2954" x2="-0.7112" y2="-0.7112" layer="51"/>
-</package>
-</packages>
-<symbols>
-<symbol name="NPN">
-<wire x1="2.54" y1="2.54" x2="0.508" y2="1.524" width="0.1524" layer="94"/>
-<wire x1="1.778" y1="-1.524" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="-2.54" x2="1.27" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="1.27" y1="-2.54" x2="1.778" y2="-1.524" width="0.1524" layer="94"/>
-<wire x1="1.54" y1="-2.04" x2="0.308" y2="-1.424" width="0.1524" layer="94"/>
-<wire x1="1.524" y1="-2.413" x2="2.286" y2="-2.413" width="0.254" layer="94"/>
-<wire x1="2.286" y1="-2.413" x2="1.778" y2="-1.778" width="0.254" layer="94"/>
-<wire x1="1.778" y1="-1.778" x2="1.524" y2="-2.286" width="0.254" layer="94"/>
-<wire x1="1.524" y1="-2.286" x2="1.905" y2="-2.286" width="0.254" layer="94"/>
-<wire x1="1.905" y1="-2.286" x2="1.778" y2="-2.032" width="0.254" layer="94"/>
-<text x="-10.16" y="7.62" size="1.778" layer="95">&gt;NAME</text>
-<text x="-10.16" y="5.08" size="1.778" layer="96">&gt;VALUE</text>
-<rectangle x1="-0.254" y1="-2.54" x2="0.508" y2="2.54" layer="94"/>
-<pin name="B" x="-2.54" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
-<pin name="E" x="2.54" y="-5.08" visible="off" length="short" direction="pas" swaplevel="3" rot="R90"/>
-<pin name="C" x="2.54" y="5.08" visible="off" length="short" direction="pas" swaplevel="2" rot="R270"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="BC848*" prefix="Q">
-<description>&lt;b&gt;NPN Transistor&lt;/b&gt;</description>
-<gates>
-<gate name="G$1" symbol="NPN" x="0" y="0"/>
-</gates>
-<devices>
-<device name="SMD" package="SOT23">
-<connects>
-<connect gate="G$1" pin="B" pad="1"/>
-<connect gate="G$1" pin="C" pad="3"/>
-<connect gate="G$1" pin="E" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-<technology name="A"/>
-<technology name="ALT1"/>
-<technology name="B"/>
-<technology name="BLT1"/>
-<technology name="C"/>
-<technology name="CLT1"/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="transistor-small-signal">
 <description>&lt;b&gt;Small Signal Transistors&lt;/b&gt;&lt;p&gt;
 Packages from :&lt;br&gt;
@@ -10027,11 +9960,9 @@ www.irf.com&lt;p&gt;
 <part name="P+1" library="supply2" deviceset="+9V" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="IC1" library="linear" deviceset="LM324" device="D" value="LM324D"/>
-<part name="T1" library="transistor-npn" deviceset="BC848*" device="SMD" technology="A" value="BC848ASMD"/>
 <part name="R3" library="resistor" deviceset="R-EU_" device="M0805" value="1.8k"/>
 <part name="R4" library="resistor" deviceset="R-EU_" device="M0805" value="680"/>
 <part name="R5" library="resistor" deviceset="R-EU_" device="M0805" value="4.3k"/>
-<part name="T2" library="transistor-npn" deviceset="BC848*" device="SMD" technology="A" value="BC848ASMD"/>
 <part name="LED1" library="led" deviceset="LED" device="SML0805"/>
 <part name="NASS" library="led" deviceset="LED" device="SML0805"/>
 <part name="FEUCHT" library="led" deviceset="LED" device="SML0805"/>
@@ -10062,7 +9993,6 @@ www.irf.com&lt;p&gt;
 <part name="JP1" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="JP3Q" device="" package3d_urn="urn:adsk.eagle:package:15460/1" value="JP2_DSIG"/>
 <part name="R15" library="resistor" deviceset="R-EU_" device="M0805" value="4.7k"/>
 <part name="R16" library="resistor" deviceset="R-EU_" device="M0805" value="10k"/>
-<part name="T3" library="transistor-npn" deviceset="BC848*" device="SMD" technology="A"/>
 <part name="R17" library="resistor" deviceset="R-EU_" device="M0805" value="4.7k"/>
 <part name="R18" library="resistor" deviceset="R-EU_" device="M0805" value="4.7k"/>
 <part name="C1" library="rcl" deviceset="C-EU" device="C0805" value="0.1uF"/>
@@ -10084,17 +10014,9 @@ gewechselt werden muss.</text>
 <instance part="GND1" gate="1" x="5.08" y="104.14"/>
 <instance part="IC1" gate="A" x="-76.2" y="40.64"/>
 <instance part="IC1" gate="P" x="-76.2" y="40.64" smashed="yes"/>
-<instance part="T1" gate="G$1" x="-60.96" y="40.64" smashed="yes">
-<attribute name="NAME" x="-63.5" y="43.18" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-66.04" y="45.72" size="1.778" layer="96"/>
-</instance>
 <instance part="R3" gate="G$1" x="-96.52" y="30.48" rot="R90"/>
 <instance part="R4" gate="G$1" x="-96.52" y="7.62" rot="R90"/>
 <instance part="R5" gate="G$1" x="-96.52" y="-17.78" rot="R90"/>
-<instance part="T2" gate="G$1" x="-60.96" y="15.24" smashed="yes">
-<attribute name="NAME" x="-63.5" y="17.78" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-66.04" y="20.32" size="1.778" layer="96"/>
-</instance>
 <instance part="LED1" gate="G$1" x="-38.1" y="48.26" rot="R90"/>
 <instance part="NASS" gate="G$1" x="-38.1" y="35.56" rot="R90"/>
 <instance part="FEUCHT" gate="G$1" x="-38.1" y="22.86" rot="R90"/>
@@ -10134,11 +10056,10 @@ gewechselt werden muss.</text>
 </instance>
 <instance part="R15" gate="G$1" x="-27.94" y="-38.1" rot="R90"/>
 <instance part="R16" gate="G$1" x="-78.74" y="101.6" rot="R90"/>
-<instance part="T3" gate="G$1" x="-60.96" y="-10.16"/>
 <instance part="R17" gate="G$1" x="-35.56" y="-38.1" rot="R90"/>
 <instance part="R18" gate="G$1" x="-43.18" y="-38.1" rot="R90"/>
 <instance part="C1" gate="G$1" x="-81.28" y="-27.94" rot="R90"/>
-<instance part="Q1" gate="G$1" x="2.54" y="35.56"/>
+<instance part="Q1" gate="G$1" x="-58.42" y="43.18"/>
 <instance part="Q2" gate="G$1" x="5.08" y="22.86"/>
 <instance part="Q3" gate="G$1" x="2.54" y="10.16"/>
 </instances>
@@ -10335,7 +10256,6 @@ gewechselt werden muss.</text>
 </net>
 <net name="NASS" class="0">
 <segment>
-<pinref part="T1" gate="G$1" pin="E"/>
 <pinref part="R9" gate="G$1" pin="2"/>
 <wire x1="-58.42" y1="35.56" x2="-53.34" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="35.56" x2="-50.8" y2="35.56" width="0.1524" layer="91"/>
@@ -10343,6 +10263,8 @@ gewechselt werden muss.</text>
 <junction x="-53.34" y="35.56"/>
 <pinref part="R10" gate="G$1" pin="2"/>
 <wire x1="-53.34" y1="48.26" x2="-50.8" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="Q1" gate="G$1" pin="S"/>
+<wire x1="-58.42" y1="35.56" x2="-58.42" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="B" pin="1"/>
@@ -10354,7 +10276,6 @@ gewechselt werden muss.</text>
 </net>
 <net name="FEUCHT" class="0">
 <segment>
-<pinref part="T2" gate="G$1" pin="E"/>
 <pinref part="R11" gate="G$1" pin="2"/>
 <wire x1="-58.42" y1="10.16" x2="-53.34" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="10.16" x2="-50.8" y2="10.16" width="0.1524" layer="91"/>
@@ -10380,7 +10301,6 @@ gewechselt werden muss.</text>
 <junction x="-53.34" y="-15.24"/>
 <pinref part="R13" gate="G$1" pin="2"/>
 <wire x1="-53.34" y1="-15.24" x2="-50.8" y2="-15.24" width="0.1524" layer="91"/>
-<pinref part="T3" gate="G$1" pin="E"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="B" pin="5"/>
@@ -10428,19 +10348,17 @@ gewechselt werden muss.</text>
 <label x="-76.2" y="53.34" size="1.016" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="T1" gate="G$1" pin="C"/>
-<wire x1="-58.42" y1="45.72" x2="-58.42" y2="50.8" width="0.1524" layer="91"/>
-<label x="-58.42" y="50.8" size="1.778" layer="95"/>
+<wire x1="-58.42" y1="48.26" x2="-58.42" y2="55.88" width="0.1524" layer="91"/>
+<label x="-58.42" y="55.88" size="1.778" layer="95"/>
+<pinref part="Q1" gate="G$1" pin="D"/>
 </segment>
 <segment>
-<pinref part="T2" gate="G$1" pin="C"/>
 <wire x1="-58.42" y1="20.32" x2="-58.42" y2="25.4" width="0.1524" layer="91"/>
 <label x="-58.42" y="25.4" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="-58.42" y1="-5.08" x2="-58.42" y2="0" width="0.1524" layer="91"/>
 <label x="-58.42" y="0" size="1.778" layer="95"/>
-<pinref part="T3" gate="G$1" pin="C"/>
 </segment>
 <segment>
 <pinref part="MOS1" gate="G$1" pin="D"/>
@@ -10473,14 +10391,13 @@ gewechselt werden muss.</text>
 <net name="N$2" class="0">
 <segment>
 <pinref part="IC1" gate="A" pin="OUT"/>
-<pinref part="T1" gate="G$1" pin="B"/>
 <wire x1="-68.58" y1="40.64" x2="-63.5" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="Q1" gate="G$1" pin="G"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
 <pinref part="IC1" gate="D" pin="OUT"/>
-<pinref part="T2" gate="G$1" pin="B"/>
 <wire x1="-68.58" y1="15.24" x2="-63.5" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -10488,7 +10405,6 @@ gewechselt werden muss.</text>
 <segment>
 <pinref part="IC1" gate="C" pin="OUT"/>
 <wire x1="-68.58" y1="-10.16" x2="-63.5" y2="-10.16" width="0.1524" layer="91"/>
-<pinref part="T3" gate="G$1" pin="B"/>
 </segment>
 </net>
 <net name="N$3" class="0">
